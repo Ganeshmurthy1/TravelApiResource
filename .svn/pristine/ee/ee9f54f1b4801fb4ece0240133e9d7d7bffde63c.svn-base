@@ -1,0 +1,21 @@
+# Root logger option
+
+log4j.rootLogger=INFO, file
+#log4j.rootLogger=DEBUG, file
+#log4j.logger.org.quartz=DEBUG
+
+# Direct log messages to a log file
+log4j.appender.file=org.apache.log4j.RollingFileAppender
+####Live Server ######################################################
+log4j.appender.file.File=/opt/tayyarahresourceapi/common/logs/apiLog.log
+####Dev  Server m-team  ######################################################
+#log4j.appender.file.File=/opt/devresourceapi/common/logs/apiLog.log
+####Dev  Server tech-team  ######################################################
+#log4j.appender.file.File=/opt/devresourceapidev/common/logs/apiLog.log
+#log4j.appender.file.File=D:/Apache Server For tadmin/logs/tayyarahresourceapiLog.log
+log4j.appender.file.MaxFileSize=20MB
+log4j.appender.file.MaxBackupIndex=1000
+log4j.appender.file.layout=org.apache.log4j.PatternLayout
+log4j.appender.file.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
+
+
